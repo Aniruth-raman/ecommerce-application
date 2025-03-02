@@ -1,0 +1,32 @@
+#version: "3.8"
+
+name: 'e-commerce application'
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=catalogdb
+#    networks:
+#      - e-commerce
+#  catalog-service:
+#    image: catalog-service:latest
+#    container_name: catalog-service
+#    ports:
+#      - "8081:8081"
+#    environment:
+#      - SPRING_APPLICATION_NAME=catalog-service
+#      - SERVER_PORT=8081
+#      - MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE=*
+#      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/catalogdb
+#      - SPRING_DATASOURCE_USERNAME=root
+#      - SPRING_DATASOURCE_PASSWORD=root
+#    depends_on:
+#      - mysql
+#    networks:
+#      - e-commerce
+

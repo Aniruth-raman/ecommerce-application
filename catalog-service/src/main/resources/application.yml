@@ -1,0 +1,11 @@
+spring.application.name: catalog-service
+server:
+  port: 8081
+  shutdown: graceful
+management.endpoints:
+  web:
+    exposure:
+      include: "*"
+SPRING_DATASOURCE_URL: 'jdbc:mysql://mysql:3306/catalogdb'
+SPRING_DATASOURCE_USERNAME: 'root'
+SPRING_DATASOURCE_PASSWORD: 'root'
